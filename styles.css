@@ -75,13 +75,17 @@ h1 {
 }
 
 .txt-description {
+    font-family: "Inter", sans-serif;
   color: var(--sfwhite);
 }
 
 .stat-num {
+    font-family: "Inter", sans-serif;
   color: white;
 }
 
 .stat-title {
+    font-family: 'Lexend Deca', sans-serif;
   color: var(--stwhite);
+  text-transform: uppercase;
 }
