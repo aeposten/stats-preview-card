@@ -17,14 +17,71 @@ font-family: 'Lexend Deca', sans-serif;
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 
 /* Variables for colors */
 
 :root {
-    --dkpurple: hsl(233, 47%, 7%);
-    --purple:  hsl(244, 38%, 16%);
-    --violet: hsl(277, 64%, 61%);
-    --sfwhite: hsla(0, 0%, 100%, 0.75);
-    --stwhite: hsla(0, 0%, 100%, 0.6);
+  --dkpurple: hsl(233, 47%, 7%);
+  --purple: hsl(244, 38%, 16%);
+  --violet: hsl(277, 64%, 61%);
+  --sfwhite: hsla(0, 0%, 100%, 0.75);
+  --stwhite: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dkpurple);
+}
+
+main {
+  width: 87.2%;
+}
+
+.stat-card {
+  background-color: var(--purple);
+}
+
+.img {
+  width: 100%;
+  min-height: 15em;
+  background-image: url("images/image-header-mobile.jpg");
+  background-size: cover;
+}
+.overlay {
+  width: 100%;
+  height: 15em;
+  position: relative;
+  z-index: 2;
+  opacity: 0.6;
+  background-color: var(--violet);
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+.insights {
+  color: var(--violet);
+}
+
+.txt-description {
+  color: var(--sfwhite);
+}
+
+.stat-num {
+  color: white;
+}
+
+.stat-title {
+  color: var(--stwhite);
 }
