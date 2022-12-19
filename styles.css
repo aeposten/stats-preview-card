@@ -44,21 +44,22 @@ body {
 
 main {
   width: 87.2%;
+  background-color: var(--purple);
 }
 
 .stat-card {
-  width: 100%;
-  min-height: 48.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--purple);
+  gap: 1.5em;
+  margin: 2.5em 2em;
+
 }
 
 .img {
   width: 100%;
-  min-height: 15em;
+  /* min-height: 15em; */
   background-image: url("images/image-header-mobile.jpg");
   background-size: cover;
 }
@@ -72,7 +73,6 @@ main {
 }
 
 h1 {
-  margin: 1.42em 1.14em 0.57em 1.14em;
   text-align: center;
   font-size: 1.75rem;
   font-family: "Inter", sans-serif;
@@ -85,7 +85,6 @@ h1 {
 }
 
 .txt-description {
-  margin: 0 2.13em;
   text-align: center;
   font-size: 0.9375rem;
   font-family: "Inter", sans-serif;
@@ -96,12 +95,13 @@ h1 {
 .stats {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
 }
 
 .stat {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    line-height: 1.81;
 }
 
 .stat-num {
