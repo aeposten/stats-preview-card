@@ -1,22 +1,3 @@
-/* 
-font-family: 'Inter', sans-serif;
-font-family: 'Lexend Deca', sans-serif;
-
-### Primary
-
-- Very dark blue (main background): hsl(233, 47%, 7%)
-- Dark desaturated blue (card background): hsl(244, 38%, 16%)
-- Soft violet (accent): hsl(277, 64%, 61%)
-
-### Neutral
-
-- White (main heading, stats): hsl(0, 0%, 100%)
-- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
-- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
-
-
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 
 /* Variables for colors */
@@ -44,34 +25,38 @@ body {
 
 main {
   width: 87.2%;
+  border-radius: 0.5em;
   background-color: var(--purple);
 }
 
+/* General formatting for card component */
 .stat-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   gap: 1.5em;
   margin: 2.5em 2em;
-
 }
 
+/* Hero Image */
 .img {
   width: 100%;
-  /* min-height: 15em; */
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
   background-image: url("images/image-header-mobile.jpg");
   background-size: cover;
 }
+
 .overlay {
   width: 100%;
   height: 15em;
   position: relative;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
   z-index: 2;
   opacity: 0.6;
   background-color: var(--violet);
 }
 
+/* Text content */
 h1 {
   text-align: center;
   font-size: 1.75rem;
@@ -92,16 +77,14 @@ h1 {
   line-height: 1.6;
 }
 
+/* Statistics Section */
 .stats {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1.81;
+  line-height: 1.81;
 }
 
 .stat-num {
@@ -115,4 +98,47 @@ h1 {
   font-family: "Lexend Deca", sans-serif;
   color: var(--stwhite);
   text-transform: uppercase;
+}
+
+/* Grouping frequently used styles */
+.stat-card, .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Media query for responsive styling */
+@media (min-width: 768px) {
+  main {
+    width: 77%;
+    min-height: 27em;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .img {
+    background-image: url("images/image-header-desktop.jpg");
+  }
+
+  .overlay {
+    height: 100%;
+    border-top-left-radius: 0em;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+  }
+
+  .stat-card {
+    align-items: flex-start;
+    margin: 4em;
+  }
+
+  h1, .txt-description {
+    text-align: start;
+  }
+
+  .stats {
+    flex-direction: row;
+    margin-top: 1em;
+    gap: 4em;
+  }
 }
