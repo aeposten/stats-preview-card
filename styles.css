@@ -47,6 +47,12 @@ main {
 }
 
 .stat-card {
+  width: 100%;
+  min-height: 48.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: var(--purple);
 }
 
@@ -66,8 +72,12 @@ main {
 }
 
 h1 {
+  margin: 1.42em 1.14em 0.57em 1.14em;
+  text-align: center;
+  font-size: 1.75rem;
   font-family: "Inter", sans-serif;
   color: white;
+  line-height: 1.5;
 }
 
 .insights {
@@ -75,17 +85,34 @@ h1 {
 }
 
 .txt-description {
-    font-family: "Inter", sans-serif;
+  margin: 0 2.13em;
+  text-align: center;
+  font-size: 0.9375rem;
+  font-family: "Inter", sans-serif;
   color: var(--sfwhite);
+  line-height: 1.6;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
 }
 
 .stat-num {
-    font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
   color: white;
 }
 
 .stat-title {
-    font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.75rem;
+  font-family: "Lexend Deca", sans-serif;
   color: var(--stwhite);
   text-transform: uppercase;
 }
